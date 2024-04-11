@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Accountmaster } from 'src/schemas/Accountmaster.schema';
-import { CreateAccountmasterDto } from './dto/CreateAccountmaster.dto';
-import { UpdateAccountmasterDto } from './dto/UpdateAccountmaster.dto';
+import { Contactmaster } from 'src/schemas/Contactmaster.schema';
+import { CreateContactmasterDto } from './dto/CreateContactmaster.dto';
+import { UpdateContactmasterDto } from './dto/UpdateContactmaster.dto';
 
 @Injectable()
-export class AccountmastersService {
-  constructor(@InjectModel(Accountmaster.name) private currentModel: Model<Accountmaster>) {}
+export class ContactmastersService {
+  constructor(@InjectModel(Contactmaster.name) private currentModel: Model<Contactmaster>) {}
 
-  async createRecord(createCurrentDto: CreateAccountmasterDto) {
+  async createRecord(createCurrentDto: CreateContactmasterDto) {
     const newRecord = new this.currentModel(createCurrentDto);
     return newRecord.save();
   }
@@ -22,7 +22,7 @@ export class AccountmastersService {
     return this.currentModel.findById(id);
   }
 
-  updateRecord(id: string, updateCurrentDto: UpdateAccountmasterDto) {
+  updateRecord(id: string, updateCurrentDto: UpdateContactmasterDto) {
     return this.currentModel.findByIdAndUpdate(id, updateCurrentDto, { new: true });
   }
 

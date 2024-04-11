@@ -13,10 +13,10 @@ import {
 import { AccountmastersService } from './accountsmaster.service';
 import { CreateAccountmasterDto } from './dto/CreateAccountmaster.dto';
 import mongoose from 'mongoose';
-import { UpdateAccountmasterDto } from './dto/UpdateAccountmasterdto';
+import { UpdateAccountmasterDto } from './dto/UpdateAccountmaster.dto';
 
 @Controller('accountsmaster')
-export class AccounmastersController {
+export class AccountmastersController {
   constructor(private currentService: AccountmastersService) {}
 
   @Post()

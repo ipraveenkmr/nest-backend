@@ -1,13 +1,13 @@
 import { Type } from 'class-transformer';
 import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
-export class CreateAccountmasterDto {
+export class CreateQuotemasterDto {
   @IsNotEmpty()
   @IsString()
   userId: string;
 
   @IsOptional()
-  accounts?: string;
+  quotes?: string;
 
   @IsString()
   @IsOptional()

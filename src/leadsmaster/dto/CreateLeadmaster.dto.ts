@@ -1,13 +1,13 @@
 import { Type } from 'class-transformer';
 import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
-export class CreateAccountmasterDto {
+export class CreateLeadmasterDto {
   @IsNotEmpty()
   @IsString()
   userId: string;
 
   @IsOptional()
-  accounts?: string;
+  leads?: string;
 
   @IsString()
   @IsOptional()

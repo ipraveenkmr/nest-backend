@@ -1,8 +1,13 @@
-import { IsOptional, IsString } from 'class-validator';
+import { Type } from 'class-transformer';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
-export class UpdateAccountmasterDto {
+export class CreateProductmasterDto {
+  @IsNotEmpty()
+  @IsString()
+  userId: string;
+
   @IsOptional()
-  accounts?: string;
+  products?: string;
 
   @IsString()
   @IsOptional()

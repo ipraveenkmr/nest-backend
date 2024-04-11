@@ -1,8 +1,8 @@
 import { IsOptional, IsString } from 'class-validator';
 
-export class UpdateAccountmasterDto {
+export class UpdateNotemasterDto {
   @IsOptional()
-  accounts?: string;
+  notes?: string;
 
   @IsString()
   @IsOptional()

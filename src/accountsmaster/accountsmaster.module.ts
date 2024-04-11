@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Accountmaster, AccountmasterSchema } from 'src/schemas/Accountmaster.schema';
 import { AccountmastersService } from './accountsmaster.service';
-import { AccounmastersController } from './accountsmaster.controller';
+import { AccountmastersController } from './accountsmaster.controller';
 
 @Module({
   imports: [
@@ -14,6 +14,6 @@ import { AccounmastersController } from './accountsmaster.controller';
     ]),
   ],
   providers: [AccountmastersService],
-  controllers: [AccounmastersController],
+  controllers: [AccountmastersController],
 })
-export class AccounmastersModule {}
+export class AccountmastersModule {}

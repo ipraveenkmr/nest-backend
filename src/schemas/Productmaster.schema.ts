@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema()
-export class ProductMaster extends Document {
+export class Productmaster extends Document {
   @Prop({ required: true })
   userId: string;
   
@@ -25,4 +25,4 @@ export class ProductMaster extends Document {
   updatedAt: Date;
 }
 
-export const ProductMasterSchema = SchemaFactory.createForClass(ProductMaster);
+export const ProductmasterSchema = SchemaFactory.createForClass(Productmaster);

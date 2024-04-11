@@ -10,18 +10,18 @@ import {
   Patch,
   Delete,
 } from '@nestjs/common';
-import { AccountmastersService } from './accountsmaster.service';
-import { CreateAccountmasterDto } from './dto/CreateAccountmaster.dto';
+import { ProductmastersService } from './productsmaster.service';
+import { CreateProductmasterDto } from './dto/CreateProductmaster.dto';
 import mongoose from 'mongoose';
-import { UpdateAccountmasterDto } from './dto/UpdateAccountmasterdto';
+import { UpdateProductmasterDto } from './dto/UpdateProductmaster.dto';
 
-@Controller('accountsmaster')
-export class AccounmastersController {
-  constructor(private currentService: AccountmastersService) {}
+@Controller('productsmaster')
+export class ProductmastersController {
+  constructor(private currentService: ProductmastersService) {}
 
   @Post()
   @UsePipes(new ValidationPipe())
-  createRecord(@Body() createCurrentDto: CreateAccountmasterDto) {
+  createRecord(@Body() createCurrentDto: CreateProductmasterDto) {
     console.log(createCurrentDto);
     return this.currentService.createRecord(createCurrentDto);
   }
@@ -44,7 +44,7 @@ export class AccounmastersController {
   @UsePipes(new ValidationPipe())
   async updateRecord(
     @Param('id') id: string,
-    @Body() updateCurrentDto: UpdateAccountmasterDto,
+    @Body() updateCurrentDto: UpdateProductmasterDto,
   ) {
     const isValid = mongoose.Types.ObjectId.isValid(id);
     if (!isValid) throw new HttpException('Invalid ID', 400);

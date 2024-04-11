@@ -8,7 +8,13 @@ import { TasksModule } from './tasks/tasks.module';
 import { LeadsModule } from './leads/leads.module';
 import { ContactsModule } from './contacts/contacts.module';
 import { AccountsModule } from './accounts/accounts.module';
-import { AccounmastersModule } from './accountsmaster/accountsmaster.module';
+import { AccountmastersModule } from './accountsmaster/accountsmaster.module';
+import { ContactmastersModule } from './contactsmaster/contactsmaster.module';
+import { LeadmastersModule } from './leadsmaster/leadsmaster.module';
+import { NotemastersModule } from './notesmaster/notesmaster.module';
+import { ProductmastersModule } from './productsmaster/productsmaster.module';
+import { QuotemastersModule } from './quotesmaster/quotesmaster.module';
+import { OpportunitymastersModule } from './opportunitymaster/opportunitymaster.module';
 import { NotesModule } from './notes/notes.module';
 
 @Module({
@@ -22,7 +28,13 @@ import { NotesModule } from './notes/notes.module';
     LeadsModule,
     ContactsModule,
     AccountsModule,
-    AccounmastersModule,
+    AccountmastersModule,
+    ContactmastersModule,
+    LeadmastersModule,
+    NotemastersModule,
+    ProductmastersModule,
+    QuotemastersModule,
+    OpportunitymastersModule,
     NotesModule,
   ],
   controllers: [AppController],

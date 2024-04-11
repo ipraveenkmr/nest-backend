@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema()
-export class OpportunityMaster extends Document {
+export class Opportunitymaster extends Document {
   @Prop({ required: true })
   userId: string;
   
@@ -25,4 +25,4 @@ export class OpportunityMaster extends Document {
   updatedAt: Date;
 }
 
-export const OpportunityMasterSchema = SchemaFactory.createForClass(OpportunityMaster);
+export const OpportunitymasterSchema = SchemaFactory.createForClass(Opportunitymaster);

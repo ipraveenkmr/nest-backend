@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema()
-export class QuoteMaster extends Document {
+export class Quotemaster extends Document {
   @Prop({ required: true })
   userId: string;
   
@@ -25,4 +25,4 @@ export class QuoteMaster extends Document {
   updatedAt: Date;
 }
 
-export const QuoteMasterSchema = SchemaFactory.createForClass(QuoteMaster);
+export const QuotemasterSchema = SchemaFactory.createForClass(Quotemaster);
