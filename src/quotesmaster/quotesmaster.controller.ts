@@ -15,7 +15,7 @@ import { CreateQuotemasterDto } from './dto/CreateQuotemaster.dto';
 import mongoose from 'mongoose';
 import { UpdateQuotemasterDto } from './dto/UpdateQuotemaster.dto';
 
-@Controller('quotessmaster')
+@Controller('quotesmaster')
 export class QuotemastersController {
   constructor(private currentService: QuotemastersService) {}
 
